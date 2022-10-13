@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
 body {
     height: calc(2500px + 100vh);
     margin: 0;
     background-color: #151515;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #sidebar {
@@ -22,6 +25,7 @@ body {
     font-size: 3vw;
     text-decoration: none;
     display: flex;
+    align-items: center;
 }
 
 .bar-link-div {
@@ -50,10 +54,6 @@ body {
 
 .btn-closed {
     transform: translateX(calc(15vw + 30px));
-}
-
-.down-img {
-    bottom: -2.5vh;
 }
 
 .about {
