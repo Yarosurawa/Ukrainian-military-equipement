@@ -1,7 +1,7 @@
 body {
     height: calc(2500px + 100vh);
     margin: 0;
-    background-color: #222;
+    background-color: #151515;
 }
 
 #sidebar {
@@ -17,6 +17,7 @@ body {
 }
 
 .bar-link {
+    cursor: pointer;
     color: #f1f1f1;
     font-size: 3vw;
     text-decoration: none;
@@ -56,6 +57,7 @@ body {
 }
 
 .about {
+    box-shadow: inset 0 0 10px #111;
     transition: transform 1s ease;
     height: 100vh;
     width: 100vw;
@@ -66,15 +68,16 @@ body {
 #about-header {
     height: 50vh;
     display: flex;
-    justify-content: center;
-    background: linear-gradient(#15151555 -20%, #151515 90%) ,  no-repeat center -2vh/60% url(./img/About/Ukraine-flag-volunteers.jpg) , #e1e1e1;
+    align-items: center;
+    background: linear-gradient(#15151555 -20%, #151515 100%) ,  no-repeat center/80% url(./img/About/Ukraine-flag-volunteers.jpg) , #e1e1e1;
 }
 
 #about-header h1 {
-    position: absolute;
+    width: 100vw;
+    text-align: center;
+    position: relative;
     color:whitesmoke;
-    top: calc(25vh - ((10vh + 10vw) / 2) - 10px);
-    line-height: 0;
+    line-height: calc((9vh + 9vw) / 2);
     font-size: calc((9vh + 9vw) / 2);
 }
 
@@ -84,35 +87,89 @@ body {
 }
 
 .volunteers {
+    box-shadow: inset 0 0 10px #111;
+    display: flex;
     transition: transform 1s ease;
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background: #050;
+    background: #151515;
 }
 
+#volunteers-header {
+    position: absolute;
+    height: 100vh;
+    width: 50vw;
+    left: 50vw;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, #15151555 -20%, #151515 100%) ,  no-repeat center 30%/100% url(./img/volunteers/Serhiy_Prytula.jpg) , #555;
+}
+
+#volunteers-header h1 {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    color:whitesmoke;
+    line-height: calc((9vh + 9vw) / 2);
+    font-size: calc((9vh + 9vw) / 2);
+}
+
+#volunteers-main {
+    width: 50vw; 
+    color: whitesmoke;
+    text-align: center;
+}
+
+
 .org {
+    box-shadow: inset 0 0 10px #111;
     transition: transform 1s ease;
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background: #005;
+    background: #151515;
+}
+
+#org-header {
+    top: 50vh;
+    position: absolute;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#15151555 -20%, #151515 100%) ,  no-repeat center/50% url(./img/org/povernys-Zhyvym.png) , #fff;
+}
+
+#org-header h1 {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    color:whitesmoke;
+    line-height: calc((9vh + 9vw) / 2);
+    font-size: calc((9vh + 9vw) / 2);
+}
+
+#org-main {
+    color: whitesmoke;
+    text-align: center;
 }
 
 .links {
+    box-shadow: inset 0 0 10px #111;
     transition: transform 1s ease;
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background: #a0a;
+    background: #151515;
 }
 
 .lists {
+    box-shadow: inset 0 0 10px #111;
     transition: transform 1s ease;
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background: #aa0;
+    background: #151515;
 }
 
 .hide-up {
