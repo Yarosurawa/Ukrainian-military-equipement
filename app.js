@@ -26,14 +26,16 @@ const org = document.querySelector('.org');
 const links = document.querySelector('.links');
 const lists = document.querySelector('.lists');
 
+const p = document.querySelectorAll('p')
+const h1 = document.querySelectorAll('h1')
 
-window.addEventListener('scroll', checkBoxes);
+window.addEventListener('scroll', triggerCheck);
 
-checkBoxes()
+triggerCheck()
 
-function checkBoxes() {
-    const triggerBottom = window.pageYOffset;
-      if(triggerBottom <= 500) {
+function triggerCheck() {
+    const trigger = window.pageYOffset;
+      if(trigger <= 500) {
         about.classList.remove('hide-up');
         volunteers.classList.add('hide-down');
         volunteers.classList.remove('hide-up');
@@ -42,7 +44,7 @@ function checkBoxes() {
         links.classList.add('hide-down');
         links.classList.remove('hide-up');
         lists.classList.add('hide-down');
-      } else if (500 <= triggerBottom && triggerBottom <= 1000){
+      } else if (500 <= trigger && trigger <= 1000){
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
         volunteers.classList.remove('hide-up');
@@ -51,7 +53,7 @@ function checkBoxes() {
         links.classList.add('hide-down');
         links.classList.remove('hide-up');
         lists.classList.add('hide-down');
-      } else if (1000 <= triggerBottom && triggerBottom <= 1500){
+      } else if (1000 <= trigger && trigger <= 1500){
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
         volunteers.classList.add('hide-up');
@@ -60,7 +62,7 @@ function checkBoxes() {
         links.classList.add('hide-down');
         links.classList.remove('hide-up');
         lists.classList.add('hide-down');
-      } else if (1500 < triggerBottom && triggerBottom <= 2000) {
+      } else if (1500 < trigger && trigger <= 2000) {
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
         volunteers.classList.add('hide-up');

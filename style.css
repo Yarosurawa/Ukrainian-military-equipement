@@ -174,3 +174,12 @@ body {
 .hide-down {
     transform: translateY(100vh);
 }
+
+h1, p {
+    transition: transform 1.5s, opacity 1.5s;
+}
+
+.hide-down h1, .hide-down p, .hide-up h1, .hide-up p {
+    transform: translateX(100px);
+    opacity: 0;
+}
