@@ -90,6 +90,17 @@ const linksLink = document.getElementById('links-link');
 const listsLink = document.getElementById('lists-link');
 
 aboutLink.onclick = function() {
-    console.log('gg')
-    window.pageYOffset = 250
+    window.scrollTo(0, 250)
+}
+volunteersLink.onclick = function() {
+  window.scrollTo(0, 750)
+}
+orgLink.onclick = function() {
+  window.scrollTo(0, 1250)
+}
+linksLink.onclick = function() {
+  window.scrollTo(0, 1750)
+}
+listsLink.onclick = function() {
+  window.scrollTo(0, 2250)
 }
