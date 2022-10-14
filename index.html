@@ -9,44 +9,75 @@
     <link rel="shortcut icon" href="./img/Ak-flatIcon.png" type="image/x-icon">
 </head>
 <body>
-    <div id="sidebar" class="closed">
+    <div id="loading">
+        <div class="spinner-box">
+            <div class="blue-orbit leo">
+            </div>
+          
+            <div class="green-orbit leo">
+            </div>
+            
+            <div class="red-orbit leo">
+            </div>
+            
+            <div class="white-orbit w1 leo">
+            </div><div class="white-orbit w2 leo">
+            </div><div class="white-orbit w3 leo">
+            </div>
+          </div>
+    </div>
+    <div id="dark-screen"></div>
+    <nav id="sidebar" class="closed">
         <div><p href="" id="close-menu" class="btn-closed"><img src="./img/free-icon-menu-4139554.png" alt="menu" width="50"></p></div>
         <div class="bar-link-div"><a id="about-link" class="bar-link"><img src="./img/home.png" height="40" class="link-img"><div>Про волонтерство</div></a></div>
         <div class="bar-link-div"><a id="volunteers-link" class="bar-link"><img src="./img/gun-flaticon.png" height="40" class="link-img"><div>Волонтери</div></a></div>
         <div class="bar-link-div"><a id="org-link" class="bar-link"><img src="./img/tank-flaticon.png" height="40" class="link-img"><div>Волонтерські організації</div></a></div>
         <div class="bar-link-div"><a id="links-link" class="bar-link"><img src="./img/observatory.png" height="40" class="link-img"><div>Посилання на армію</div></a></div>
         <div class="bar-link-div"><a id="lists-link" class="bar-link"><img src="./img/observatory.png" height="40" class="link-img"><div>Список корпорацій які донатили</div></a></div>
-    </div>
-    <div class="about">
+    </nav>
+    <article class="about">
         <header id="about-header">
             <h1>Волонтерство в Україні</h1>
         </header>
-        <main id="about-main">
+        <div id="about-main">
             <p>Bla Bla Bla</p>
-        </main>
-    </div>
-    <div class="volunteers">
-        <main id="volunteers-main">
+        </div>
+    </article>
+    <article class="volunteers">
+        <div id="volunteers-main">
             <p>Bla Bla Bla</p>
-        </main>
+        </div>
         <header id="volunteers-header">
             <h1>Волонтери</h1>
         </header>
-    </div>
-    <div class="org">
-        <main id="org-main">
+    </article>
+    <article class="org">
+        <div id="org-main">
             <p>Bla Bla Bla</p>
-        </main>
+        </div>
         <header id="org-header">
             <h1>Волонтирські організації</h1>
         </header>
-    </div>
-    <div class="links">
-        <h1>Links</h1>
-    </div>
-    <div class="lists">
-        <h1>Lists</h1>
-    </div>
+    </article>
+    <article class="links">
+        <div id="links-main-left">
+            <p>На поміч населення</p>
+        </div>
+        <div id="links-main-right">
+            <p>На поміч Армії</p>
+        </div>
+        <header id="links-header">
+            <h1>Посилання на донати для ЗСУ</h1>
+        </header>
+    </article>
+    <article class="lists">
+        <div id="lists-main">
+            <p>На Гуманітарну поміч</p>
+        </div>
+        <header id="lists-header">
+            <h1>Список корпорацій, які є котітами</h1>
+        </header>
+    </article>
     <script src="app.js"></script>
 </body>
 </html>

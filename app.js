@@ -2,18 +2,54 @@
 
 const sidebar = document.getElementById('sidebar')
 const menubtn = document.getElementById('close-menu')
+const ds = document.getElementById('dark-screen')
 let menuOpen = false
 
 menubtn.onclick = function() {
     if(menuOpen) {
-        menuOpen = false
-        sidebar.classList.add("closed")
-        menubtn.classList.add("btn-closed")
+        closeMenuFunc()
     } else {
         menuOpen = true
         sidebar.classList.remove("closed")
         menubtn.classList.remove("btn-closed")
+        ds.style.opacity = "0.9"
+        ds.style.zIndex = "9"
     }
+}
+
+function closeMenuFunc() {
+  menuOpen = false
+  sidebar.classList.add("closed")
+  menubtn.classList.add("btn-closed")
+  ds.style.opacity = "0"
+  setTimeout(()=>{ds.style.zIndex = "-1"}, 500)
+}
+
+const aboutLink = document.getElementById('about-link');
+const volunteersLink = document.getElementById('volunteers-link');
+const orgLink = document.getElementById('org-link');
+const linksLink = document.getElementById('links-link');
+const listsLink = document.getElementById('lists-link');
+
+aboutLink.onclick = function() {
+    window.scrollTo(0, 250)
+    closeMenuFunc()
+}
+volunteersLink.onclick = function() {
+  window.scrollTo(0, 750)
+  closeMenuFunc()
+}
+orgLink.onclick = function() {
+  window.scrollTo(0, 1250)
+  closeMenuFunc()
+}
+linksLink.onclick = function() {
+  window.scrollTo(0, 1750)
+  closeMenuFunc()
+}
+listsLink.onclick = function() {
+  window.scrollTo(0, 2250)
+  closeMenuFunc()
 }
 
 //------------------Scroll--------------------------
@@ -83,26 +119,14 @@ function triggerCheck() {
       }
 } 
 
-//----------------------Navigation-----------------------
+//------------------------Pre-load--------------------------
 
-const aboutLink = document.getElementById('about-link');
-const volunteersLink = document.getElementById('volunteers-link');
-const orgLink = document.getElementById('org-link');
-const linksLink = document.getElementById('links-link');
-const listsLink = document.getElementById('lists-link');
+const loading = document.getElementById("loading")
 
-aboutLink.onclick = function() {
-    window.scrollTo(0, 250)
-}
-volunteersLink.onclick = function() {
-  window.scrollTo(0, 750)
-}
-orgLink.onclick = function() {
-  window.scrollTo(0, 1250)
-}
-linksLink.onclick = function() {
-  window.scrollTo(0, 1750)
-}
-listsLink.onclick = function() {
-  window.scrollTo(0, 2250)
-}
+window.addEventListener("load", ()=>{
+  loading.style.opacity = "0"
+  setTimeout(()=>{
+    loading.remove
+    loading.style.zIndex = "-9999"
+  }, 1000)
+})
