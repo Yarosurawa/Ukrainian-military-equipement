@@ -39,6 +39,10 @@ body {
     align-items: center;
 }
 
+.bar-link:hover {
+    color: #aaa;
+}
+
 .bar-link-div {
     margin: 5px;
     padding: 5px;
