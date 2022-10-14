@@ -1,7 +1,8 @@
 //---------------------Menu---------------------
 
 const sidebar = document.getElementById('sidebar')
-const menubtn = document.getElementById('close-menu')
+const menubtn = document.getElementById('close-menu-btn')
+const menuBtnHolder = document.getElementById('close-menu')
 const ds = document.getElementById('dark-screen')
 let menuOpen = false
 
@@ -11,7 +12,7 @@ menubtn.onclick = function() {
     } else {
         menuOpen = true
         sidebar.classList.remove("closed")
-        menubtn.classList.remove("btn-closed")
+        menuBtnHolder.classList.remove("btn-closed")
         ds.style.opacity = "0.9"
         ds.style.zIndex = "9"
     }
@@ -20,7 +21,7 @@ menubtn.onclick = function() {
 function closeMenuFunc() {
   menuOpen = false
   sidebar.classList.add("closed")
-  menubtn.classList.add("btn-closed")
+  menuBtnHolder.classList.add("btn-closed")
   ds.style.opacity = "0"
   setTimeout(()=>{ds.style.zIndex = "-1"}, 500)
 }
