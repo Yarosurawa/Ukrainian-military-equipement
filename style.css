@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
 body {
-    height: calc(2500px + 100vh);
+    height: calc(2000px + 100vh);
     margin: 0;
     background-color: #151515;
     font-family: 'PT Sans Narrow', sans-serif;
@@ -212,6 +212,27 @@ body {
     width: 100vw;
     position: fixed;
     background: #151515;
+}
+
+#lists-header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#15151555 -20%, #151515 100%) ,  no-repeat center/80% url(./img/lists/Ukraine-flag-volunteers.jpg) , #e1e1e1;
+}
+
+#lists-header h1 {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    color:whitesmoke;
+    line-height: calc((9vh + 9vw) / 2);
+    font-size: calc((9vh + 9vw) / 2);
+}
+
+#lists-main {
+    color: whitesmoke;
+    text-align: center;
 }
 
 .hide-up {

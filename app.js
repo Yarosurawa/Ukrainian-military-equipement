@@ -29,7 +29,6 @@ const aboutLink = document.getElementById('about-link');
 const volunteersLink = document.getElementById('volunteers-link');
 const orgLink = document.getElementById('org-link');
 const linksLink = document.getElementById('links-link');
-const listsLink = document.getElementById('lists-link');
 
 aboutLink.onclick = function() {
     window.scrollTo(0, 250)
@@ -47,10 +46,6 @@ linksLink.onclick = function() {
   window.scrollTo(0, 1750)
   closeMenuFunc()
 }
-listsLink.onclick = function() {
-  window.scrollTo(0, 2250)
-  closeMenuFunc()
-}
 
 //------------------Scroll--------------------------
 
@@ -60,7 +55,6 @@ const about = document.querySelector('.about');
 const volunteers = document.querySelector('.volunteers');
 const org = document.querySelector('.org');
 const links = document.querySelector('.links');
-const lists = document.querySelector('.lists');
 
 const p = document.querySelectorAll('p')
 const h1 = document.querySelectorAll('h1')
@@ -79,7 +73,6 @@ function triggerCheck() {
         org.classList.remove('hide-up');
         links.classList.add('hide-down');
         links.classList.remove('hide-up');
-        lists.classList.add('hide-down');
       } else if (500 <= trigger && trigger <= 1000){
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
@@ -88,7 +81,6 @@ function triggerCheck() {
         org.classList.remove('hide-up'); 
         links.classList.add('hide-down');
         links.classList.remove('hide-up');
-        lists.classList.add('hide-down');
       } else if (1000 <= trigger && trigger <= 1500){
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
@@ -97,8 +89,7 @@ function triggerCheck() {
         org.classList.remove('hide-up'); 
         links.classList.add('hide-down');
         links.classList.remove('hide-up');
-        lists.classList.add('hide-down');
-      } else if (1500 < trigger && trigger <= 2000) {
+      } else  {
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
         volunteers.classList.add('hide-up');
@@ -106,16 +97,6 @@ function triggerCheck() {
         org.classList.add('hide-up'); 
         links.classList.remove('hide-down');
         links.classList.remove('hide-up');
-        lists.classList.add('hide-down');
-      } else {
-        about.classList.add('hide-up');
-        volunteers.classList.remove('hide-down');
-        volunteers.classList.add('hide-up');
-        org.classList.remove('hide-down');
-        org.classList.add('hide-up'); 
-        links.classList.remove('hide-down');
-        links.classList.add('hide-up');
-        lists.classList.remove('hide-down');
       }
 } 
 
