@@ -1,3 +1,5 @@
+const body = document.querySelector('body')
+
 //---------------------Menu---------------------
 
 const sidebar = document.getElementById('sidebar')
@@ -50,15 +52,10 @@ linksLink.onclick = function() {
 
 //------------------Scroll--------------------------
 
-
-
 const about = document.querySelector('.about');
 const volunteers = document.querySelector('.volunteers');
 const org = document.querySelector('.org');
 const links = document.querySelector('.links');
-
-const p = document.querySelectorAll('p')
-const h1 = document.querySelectorAll('h1')
 
 window.addEventListener('scroll', triggerCheck);
 
@@ -100,6 +97,23 @@ function triggerCheck() {
         links.classList.remove('hide-up');
       }
 } 
+
+const pzhbtn = document.getElementById('p-zh-btn')
+const pzh = document.querySelector('.povernys-zhyvym')
+
+pzhbtn.onclick = ()=>{
+  org.classList.add('hide-left')
+  body.style.overflow = "hidden"
+  pzh.classList.remove('hide-right')
+}
+
+const backarrow = document.getElementById('back-arrow')
+
+backarrow.onclick = ()=>{
+  org.classList.remove('hide-left')
+  body.style.overflow = "visible"
+  pzh.classList.add('hide-right')
+}
 
 //------------------------Pre-load--------------------------
 

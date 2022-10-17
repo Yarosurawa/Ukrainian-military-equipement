@@ -50,6 +50,7 @@ body {
 }
 
 #close-menu {
+  cursor: pointer;
     filter: invert(70%);
     margin: 0;
     position: relative;
@@ -254,6 +255,45 @@ h1, p {
 .hide-down h1, .hide-down p, .hide-up h1, .hide-up p {
     transform: translateX(100px);
     opacity: 0;
+}
+
+.hide-right {
+  transform: translateX(100vw);
+}
+
+.hide-left {
+  transform: translateX(-100vw);
+}
+
+.povernys-zhyvym {
+    transition: transform 900ms ease;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 11;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
+#p-zh-btn-img {
+  cursor: pointer;
+  filter: invert(91.9%);
+}
+
+#back-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  filter: invert(90%);
 }
 
 /* ----------------------------------------------Spinner-------------------------------------------------- */
