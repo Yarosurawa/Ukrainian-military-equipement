@@ -101,6 +101,15 @@ body {
     text-align: center;
 }
 
+#about-main p {
+  font-size: calc((2vh + 2vw) / 2);
+}
+
+#about-main h2 {
+  font-size: calc((4vh + 4vw) / 2);
+}
+
+
 .volunteers {
     display: flex;
     transition: transform 900ms ease;
@@ -248,11 +257,11 @@ body {
     transform: translateY(100vh);
 }
 
-h1, p {
+h1, h2, p {
     transition: transform 1.5s, opacity 1.5s;
 }
 
-.hide-down h1, .hide-down p, .hide-up h1, .hide-up p {
+.hide-down h1, .hide-down p, .hide-up h1, .hide-up p, .hide-down h2, .hide-up h2{
     transform: translateX(100px);
     opacity: 0;
 }
