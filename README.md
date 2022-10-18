@@ -1,2 +1,2 @@
-# Ukrainian-military-equipement
-Website for showing off Ukrainian military equipement
+# Ukrainian-Volunteering
+Website for showing off Ukrainian volunteering
