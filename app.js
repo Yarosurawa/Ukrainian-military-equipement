@@ -31,6 +31,7 @@ function closeMenuFunc() {
 const aboutLink = document.getElementById('about-link');
 const volunteersLink = document.getElementById('volunteers-link');
 const orgLink = document.getElementById('org-link');
+const githubLink = document.getElementById('github-link');
 
 aboutLink.onclick = function() {
     window.scrollTo(0, 250)
@@ -43,6 +44,10 @@ volunteersLink.onclick = function() {
 orgLink.onclick = function() {
   window.scrollTo(0, 1250)
   closeMenuFunc()
+}
+
+githubLink.onclick = ()=>{
+  window.location.href = "https://github.com/Yarosurawa/Ukrainian-military-equipement"
 }
 
 //------------------Scroll--------------------------
