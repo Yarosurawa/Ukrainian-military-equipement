@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
 body {
-    height: calc(2000px + 100vh);
+    height: calc(1500px + 100vh);
     margin: 0;
     background-color: #151515;
     font-family: 'PT Sans Narrow', sans-serif;
+    overflow-x: hidden;
 }
 
 #dark-screen {
@@ -101,6 +102,10 @@ body {
     text-align: center;
 }
 
+h1 {
+  font-size: calc((6vh + 6vw) / 2);
+}
+
 p {
   font-size: calc((2vh + 2vw) / 2);
 }
@@ -123,6 +128,7 @@ li {
 }
 
 #volunteers-header {
+    z-index: -1;
     position: absolute;
     height: 100vh;
     width: 50vw;
@@ -155,7 +161,21 @@ li {
   display: grid;
   grid-template-rows: repeat(10, calc((4vh + 4vw) / 2));
   grid-auto-flow: column;
-  grid-auto-columns:20vw 20vw;
+  grid-auto-columns:25vw 25vw;
+}
+
+.list-item {
+  font-size: calc((2vh + 2vw) / 2.1);
+  width: 25vw;
+}
+
+.list-item a{
+  color: #77f;
+  transition: color 500ms ease;
+}
+
+.list-item a:hover{
+  color: #33b;
 }
 
 .volunteers-list-p {
@@ -190,8 +210,34 @@ li {
 }
 
 #org-main {
+    position: absolute;
+    left: 10vw;
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows:25vh 25vh;
     color: whitesmoke;
     text-align: center;
+}
+
+#org-main img {
+  height: 20vh;
+  cursor: pointer;
+}
+
+#org-main button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chick-strips-btn {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+#SOS-btn {
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 .links {
@@ -213,6 +259,7 @@ li {
     background: linear-gradient(to left, #151515 20%, #15151555 50%, #151515 80%),  no-repeat center 30%/80% url(./img/links/249836.jpg) , #555;
     background-size: cover;
 }
+
 
 #links-header h1 {
     width: 100vw;
@@ -292,17 +339,34 @@ h1, h2, li ,p {
   transform: translateX(-100vw);
 }
 
-.povernys-zhyvym {
+.side-info {
+    text-align: center;
     transition: transform 900ms ease;
     height: 100vh;
     width: 100vw;
     position: fixed;
     background: #151515;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
     z-index: 11;
+}
+.side-info a{
+  font-size: calc((9vh + 9vw) / 2);
+  color: #77f;
+  transition: color 500ms ease;
+}
+
+.side-info a:hover{
+  font-size: calc((9vh + 9vw) / 2);
+  color: #33b;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 10vw;
 }
 
 button {
@@ -315,7 +379,9 @@ button {
   filter: invert(91.9%);
 }
 
-#back-arrow {
+.back-arrow {
+  padding: 0;
+  margin: 0;
   cursor: pointer;
   position: absolute;
   top: 10px;

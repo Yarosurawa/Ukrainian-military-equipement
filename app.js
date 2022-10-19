@@ -31,7 +31,6 @@ function closeMenuFunc() {
 const aboutLink = document.getElementById('about-link');
 const volunteersLink = document.getElementById('volunteers-link');
 const orgLink = document.getElementById('org-link');
-const linksLink = document.getElementById('links-link');
 
 aboutLink.onclick = function() {
     window.scrollTo(0, 250)
@@ -45,17 +44,12 @@ orgLink.onclick = function() {
   window.scrollTo(0, 1250)
   closeMenuFunc()
 }
-linksLink.onclick = function() {
-  window.scrollTo(0, 1750)
-  closeMenuFunc()
-}
 
 //------------------Scroll--------------------------
 
 const about = document.querySelector('.about');
 const volunteers = document.querySelector('.volunteers');
 const org = document.querySelector('.org');
-const links = document.querySelector('.links');
 
 window.addEventListener('scroll', triggerCheck);
 
@@ -68,37 +62,65 @@ function triggerCheck() {
         volunteers.classList.add('hide-down');
         volunteers.classList.remove('hide-up');
         org.classList.add('hide-down');
-        org.classList.remove('hide-up');
-        links.classList.add('hide-down');
-        links.classList.remove('hide-up');
       } else if (500 <= trigger && trigger <= 1000){
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
         volunteers.classList.remove('hide-up');
         org.classList.add('hide-down'); 
-        org.classList.remove('hide-up'); 
-        links.classList.add('hide-down');
-        links.classList.remove('hide-up');
       } else if (1000 <= trigger && trigger <= 1500){
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
         volunteers.classList.add('hide-up');
         org.classList.remove('hide-down');
-        org.classList.remove('hide-up'); 
-        links.classList.add('hide-down');
-        links.classList.remove('hide-up');
       } else  {
         about.classList.add('hide-up');
         volunteers.classList.remove('hide-down');
         volunteers.classList.add('hide-up');
         org.classList.remove('hide-down');
-        org.classList.add('hide-up'); 
-        links.classList.remove('hide-down');
-        links.classList.remove('hide-up');
       }
 } 
 
-const pzhbtn = document.getElementById('p-zh-btn')
+const backarrow = document.querySelectorAll('.back-arrow')
+
+//everybody
+
+const everyBodyBtn = document.getElementById('everybody-btn-img')
+const everyBody = document.querySelector('.everybody')
+
+everyBodyBtn.onclick = ()=>{
+  org.classList.add('hide-left')
+  body.style.overflow = "hidden"
+  everyBody.classList.remove('hide-right')
+}
+
+backarrow[0].onclick = ()=>{
+  org.classList.remove('hide-left')
+  body.style.overflow = "visible"
+  everyBody.classList.add('hide-right')
+}
+
+//Phoenix
+
+const chickenStripBtn = document.getElementById('chick-strips-btn-img')
+const chickenStrip = document.querySelector('.chick-strips')
+
+chickenStripBtn.onclick = ()=>{
+  org.classList.add('hide-left')
+  body.style.overflow = "hidden"
+  chickenStrip.classList.remove('hide-right')
+}
+
+
+
+backarrow[1].onclick = ()=>{
+  org.classList.remove('hide-left')
+  body.style.overflow = "visible"
+  chickenStrip.classList.add('hide-right')
+}
+
+//pzh
+
+const pzhbtn = document.getElementById('p-zh-btn-img')
 const pzh = document.querySelector('.povernys-zhyvym')
 
 pzhbtn.onclick = ()=>{
@@ -107,12 +129,50 @@ pzhbtn.onclick = ()=>{
   pzh.classList.remove('hide-right')
 }
 
-const backarrow = document.getElementById('back-arrow')
 
-backarrow.onclick = ()=>{
+
+backarrow[2].onclick = ()=>{
   org.classList.remove('hide-left')
   body.style.overflow = "visible"
   pzh.classList.add('hide-right')
+}
+
+//SOS
+
+const SOSBtn = document.getElementById('SOS-btn-img')
+const SOS = document.querySelector('.SOS')
+
+SOSBtn.onclick = ()=>{
+  org.classList.add('hide-left')
+  body.style.overflow = "hidden"
+  SOS.classList.remove('hide-right')
+}
+
+
+
+backarrow[3].onclick = ()=>{
+  org.classList.remove('hide-left')
+  body.style.overflow = "visible"
+  SOS.classList.add('hide-right')
+}
+
+//patriot
+
+const patriotBtn = document.getElementById('patriot-btn-img')
+const patriot = document.querySelector('.patriot')
+
+patriotBtn.onclick = ()=>{
+  org.classList.add('hide-left')
+  body.style.overflow = "hidden"
+  patriot.classList.remove('hide-right')
+}
+
+
+
+backarrow[4].onclick = ()=>{
+  org.classList.remove('hide-left')
+  body.style.overflow = "visible"
+  patriot.classList.add('hide-right')
 }
 
 //------------------------Pre-load--------------------------
