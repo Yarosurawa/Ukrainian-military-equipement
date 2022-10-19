@@ -97,6 +97,16 @@ body {
     font-size: calc((9vh + 9vw) / 2);
 }
 
+.SOS h1 {
+  line-height: calc((9vh + 9vw) / 4);
+  margin: 0;
+}
+
+.everybody {
+  line-height: calc((9vh + 9vw) / 4.5);
+  margin: 0;
+}
+
 #about-main {
     color: whitesmoke;
     text-align: center;
